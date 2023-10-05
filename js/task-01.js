@@ -6,7 +6,7 @@ console.log("");
 const liCategories = document.querySelectorAll('.item');
 
 liCategories.forEach((elem, index, arr) => {
-    console.log(`Categories: ${elem.querySelector("h2").textContent}`);
-    console.log(`Elements: ${elem.querySelector('ul').children.length}`);
+    console.log(`Categories: ${elem.firstElementChild.textContent}`);
+    console.log(`Elements: ${elem.lastElementChild.children.length}`);
     (index !== arr.length-1) ? console.log("") : console.log();
 })
