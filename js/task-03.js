@@ -21,15 +21,15 @@ root.style.flexDirection = "column";
 root.style.gap = "20px";
 
 function renderImg() {
-  const murkup = images.map((image, index) => {
-    return `<img src="${image.url}" alt="${image.alt}"></img>`;
+  const murkup = images.map(({url, alt}) => {
+    return `<img src="${url}" alt="${alt}"></img>`;
   })
   root.insertAdjacentHTML("afterbegin", murkup.join(""))
 }
 
 renderImg();
 
-Array.from(root.children).forEach((img) => {
+[...root.children].forEach(img => {
   img.style.display = "block";
   img.style.maxWidth = "100%";
   img.style.height = "auto";
