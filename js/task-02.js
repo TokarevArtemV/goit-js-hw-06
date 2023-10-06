@@ -10,15 +10,13 @@ const ingredients = [
 const root = document.querySelector("#ingredients");
 
 function renderLiItems() {
-  const murkUp = [];
-  ingredients.forEach(element => {
+  const murkup = ingredients.map(element => {
     const liItem = document.createElement("li");
     liItem.textContent = element;
     liItem.className = "item";
-    murkUp.push(liItem);
+    return liItem;
   });
-  root.append(...murkUp)
+  root.append(...murkup)
 }
 
 renderLiItems();
-
