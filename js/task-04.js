@@ -10,14 +10,14 @@ incrementBtn.addEventListener("click", incrementValue);
 
 function decrementValue() {
     counterValue -= 1;
-    renderScreeen(counterValue);
+    changeCounter(counterValue);
 }
 
 function incrementValue() {
     counterValue += 1;
-    renderScreeen(counterValue);
+    changeCounter(counterValue);
 }
 
-function renderScreeen(value) {
+function changeCounter(value) {
     spanCounter.textContent = value;
 }
