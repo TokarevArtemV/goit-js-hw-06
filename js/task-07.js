@@ -3,8 +3,9 @@ const spanText = document.querySelector("#text");
 
 root.addEventListener("input", changeSize);
 
+spanText.style.fontSize = root.value+`px`;
+
 function changeSize(event) {
-  console.log(spanText.style.fontSize);
   spanText.style.fontSize = event.target.value+`px`;
 }
 
