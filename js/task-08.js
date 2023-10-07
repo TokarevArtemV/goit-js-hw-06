@@ -8,7 +8,7 @@ function sendForm(event) {
   const password = form.elements.password.value;
 
   if ((email && password) === "") {
-    alert("Все поля должны быть заполнены");
+    alert("All fields are required to be completed");
     return;
   }
   const user = {
