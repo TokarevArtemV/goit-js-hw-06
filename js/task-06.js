@@ -6,8 +6,9 @@ function isValid(event) {
   const dataLength = event.target.attributes["data-length"].value;
   const isHasValid = !!(event.target.className === "valid");
   const isHasInvalid = !!(event.target.className === "invalid");
+  const numSymbol = ((event.target.value).trim()).length;
 
-  if (event.target.value.length == dataLength) {
+  if (numSymbol == dataLength) {
     isHasInvalid
       ? root.classList.replace("invalid", "valid")
       : root.classList.add("valid");

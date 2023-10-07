@@ -6,6 +6,6 @@ root.addEventListener('input', inputText);
 function inputText(event) {
     event.target.value === ""
       ? (nameOutput.textContent = "Anonymous")
-      : (nameOutput.textContent = event.target.value);
+      : (nameOutput.textContent = (event.target.value).trim());
 }
 ;
