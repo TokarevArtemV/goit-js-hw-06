@@ -10,7 +10,8 @@ function isValid(event) {
 
   if (event.target.value.includes(" ")) {
     alert("Enter characters without spaces");
-    event.target.value="";
+    event.target.value = "";
+    clearClass();
     return;
   }
 
@@ -19,11 +20,15 @@ function isValid(event) {
       ? root.classList.replace("invalid", "valid")
       : root.classList.add("valid");
   } else if (numSymbol == 0) {
-    root.classList.remove("valid");
-    root.classList.remove("invalid");
+    clearClass();
   } else {
     isHasValid
       ? root.classList.replace("valid", "invalid")
       : root.classList.add("invalid");
   }
+}
+
+function clearClass() {
+  root.classList.remove("valid");
+  root.classList.remove("invalid");
 }
