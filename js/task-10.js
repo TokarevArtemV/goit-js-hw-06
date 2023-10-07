@@ -6,8 +6,8 @@ function getRandomHexColor() {
 
 const box = document.querySelector("#boxes");
 const input = document.querySelector("input[type=number]");
-const btnCreate = document.querySelector("[data-create]");
-const btnDestroy = document.querySelector("[data-destroy]");
+const btnCreate = document.querySelector("button[data-create]");
+const btnDestroy = document.querySelector("button[data-destroy]");
 
 btnCreate.addEventListener("click", render);
 btnDestroy.addEventListener("click", destroy);
